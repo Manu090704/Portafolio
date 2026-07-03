@@ -20,7 +20,10 @@ function App() {
         <button onClick={() => document.getElementById('Proyectos').scrollIntoView({ behavior: 'smooth' })} type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 text-sm px-3 py-2 focus:outline-none">
           Proyectos
         </button>
-        <button onClick={() => document.getElementById('Skills').scrollIntoView({ behavior: 'smooth' })} type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 text-sm px-3 py-2 focus:outline-none">
+        <button onClick={() => document.getElementById('TecnicalSkills').scrollIntoView({ behavior: 'smooth' })} type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 text-sm px-3 py-2 focus:outline-none">
+          Skills
+        </button>
+        <button onClick={() => document.getElementById('SoftSkills').scrollIntoView({ behavior: 'smooth' })} type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 text-sm px-3 py-2 focus:outline-none">
           Skills
         </button>
         <button onClick={() => document.getElementById('Experiencia').scrollIntoView({ behavior: 'smooth' })} type="button" class="text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-3 focus:ring-neutral-tertiary-soft font-medium leading-5 text-sm px-3 py-2 focus:outline-none">
@@ -36,7 +39,9 @@ function App() {
       <Chip text="Desarrollo web" />
       <Chip text="Desarrollo móvil" color="green" />
 
-      <div>
+      <div id="SobreMi">
+        <h2>Sobre mí</h2>
+        <p>Hola, soy Manuel Bajos Rivera, un desarrollador web y móvil apasionado por la tecnología y la innovación. Me especializo en crear aplicaciones web y móviles de alta calidad utilizando las últimas tecnologías y mejores prácticas de desarrollo. Mi objetivo es ofrecer soluciones eficientes y efectivas que satisfagan las necesidades de los usuarios y superen sus expectativas.</p>
 
       </div>
       <div id="Proyectos">
@@ -48,6 +53,18 @@ function App() {
           link="https://example.com" 
           tecnologies={{"React": "blue", "Vite": "green", "TailwindCSS": "yellow"}} 
         />
+      </div>
+      <div id="TecnicalSkills">
+        <p>habilidades tecnicas</p>
+      </div>
+      <div id="SoftSkills">
+        <p>habilidades blandas</p>
+      </div>
+      <div id="Experiencia">
+        <p>experiencia laboral</p>
+      </div>
+      <div id="Contacto"> 
+        <p>contacto </p>
       </div>
     </>
   )
