@@ -3,3 +3,7 @@
 @source "../node_modules/flowbite";
 @custom-variant dark (&:where(.dark, .dark *));
 @import "flowbite/src/themes/default";
+
+html {
+  scroll-behavior: smooth;
+}
