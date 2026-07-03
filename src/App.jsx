@@ -16,7 +16,7 @@ function App() {
       subtitle="A simple project" 
       description="This is a brief description of the project." 
       link="https://example.com" 
-      tecnologies={['JavaScript', 'React', 'CSS']} 
+      tecnologies={{"React": "blue", "Vite": "green", "TailwindCSS": "yellow"}} 
     />
     </>
   )

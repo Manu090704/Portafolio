@@ -9,8 +9,8 @@ const Cards = ({ title, subtitle, description, link, tecnologies, children }) =>
         <p>{description}</p>
         <a href={link} target="_blank">View Project</a>
         <div className="tecnologies">
-          {tecnologies.map((technology, index) => (
-            <Chip text={technology} key={index} />
+          {Object.entries(tecnologies).map(([technology, color], index) => (
+            <Chip text={technology} color={color} key={index} />
           ))}
         </div>
       </div>
