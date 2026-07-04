@@ -3,6 +3,7 @@ import Cards from './components/cards'
 import mail from './assets/mail.svg'
 import phone from './assets/phone.svg'
 import me from './assets/me.jpg'
+import linkedin from './assets/linkedin.svg'
 import certificateOfAi from './assets/CertificateOfAi.pdf'
 import certificateOfEthicalHacker from './assets/CertificateOfEthicalHacker.pdf'
 import certificateScrum from './assets/CertificateScrum.pdf'
@@ -97,28 +98,22 @@ const experiences = [
 const cardSections = [
   {
     id: 'Educacion',
-    kicker: 'Educacion',
-    title: 'Formacion academica',
+    kicker: 'Educación',
+    title: 'Formación ácademica',
     description:
       'Trayectoria educativa enfocada en desarrollo de software, resolucion de problemas y construccion de productos digitales.',
     items: [
       {
-        title: 'Ingenieria de Software',
-        subtitle: 'Universidad Dummy',
+        title: 'IngenierÍa en Tecnologías Computacionales',
+        subtitle: 'Tecnológico de Monterrey',
         description:
-          'Programa enfocado en arquitectura de software, desarrollo web, bases de datos y gestion de proyectos tecnologicos.',
+          'Programa enfocado en el diseño y desarrollo de software.',
       },
       {
-        title: 'Bachillerato Tecnologico',
-        subtitle: 'Colegio Dummy',
+        title: 'Concentración en Inteligencia Artificial y Ciencia de Datos',
+        subtitle: 'Tecnológico de Monterrey',
         description:
-          'Formacion base en pensamiento logico, matematicas aplicadas y fundamentos de tecnologia.',
-      },
-      {
-        title: 'Curso de Ingles Profesional',
-        subtitle: 'Academia Dummy',
-        description:
-          'Practica de comunicacion tecnica, lectura de documentacion y presentaciones para entornos profesionales.',
+          'Enfoque en aprendizaje automático, análisis de datos y desarrollo de soluciones basadas en IA.',
       },
     ],
   },
@@ -130,10 +125,10 @@ const cardSections = [
       'Certificaciones y cursos complementarios para fortalecer habilidades tecnicas y de producto.',
     items: [
       {
-        title: 'Artificial Intelligence',
+        title: 'AI Engineer',
         subtitle: 'Certificado PDF',
         description:
-          'Certificado enfocado en conceptos de inteligencia artificial y sus aplicaciones practicas.',
+          'Certificado enfocado en conceptos de inteligencia artificial y sus aplicaciones prácticas.',
         link: certificateOfAi,
         linkLabel: 'Ver certificado',
       },
@@ -141,7 +136,7 @@ const cardSections = [
         title: 'Ethical Hacker',
         subtitle: 'Certificado PDF',
         description:
-          'Certificado sobre fundamentos de seguridad, analisis de vulnerabilidades y buenas practicas.',
+          'Certificado sobre fundamentos de seguridad, analisis de vulnerabilidades y buenas prácticas.',
         link: certificateOfEthicalHacker,
         linkLabel: 'Ver certificado',
       },
@@ -149,7 +144,7 @@ const cardSections = [
         title: 'Scrum Fundamentals',
         subtitle: 'Certificado PDF',
         description:
-          'Certificado orientado a trabajo agil, colaboracion por sprints y organizacion de equipos.',
+          'Certificado orientado a trabajo ágil, colaboración por sprints y organización de equipos.',
         link: certificateScrum,
         linkLabel: 'Ver certificado',
       },
@@ -158,27 +153,27 @@ const cardSections = [
   {
     id: 'Actividades',
     kicker: 'Actividades extracurriculares',
-    title: 'Participacion fuera del aula',
+    title: 'Participación fuera del aula',
     description:
-      'Espacios donde desarrollo colaboracion, liderazgo y criterio practico al trabajar con otras personas.',
+      'Espacios donde desarrollo colaboración, liderazgo y criterio práctico al trabajar con otras personas.',
     items: [
       {
-        title: 'Club de Programacion',
-        subtitle: 'Comunidad Universitaria',
+        title: 'ICPC Competencia de Programación Competitiva',
+        subtitle: 'ACM',
         description:
-          'Participacion en retos de codigo, revision de soluciones y sesiones de aprendizaje colaborativo.',
+          'Competencia de programación donde se resuelven problemas algorítmicos en equipo bajo presión de tiempo.',
       },
       {
-        title: 'Hackathon de Innovacion',
-        subtitle: 'Evento Dummy',
+        title: 'VEX Robotics Competition',
+        subtitle: 'Vortex',
         description:
-          'Desarrollo rapido de prototipos, validacion de ideas y presentacion de soluciones ante mentores.',
+          'Competencia robótica donde se diseña, contruye y programa un robot para cumplir un objetivo específico.',
       },
       {
-        title: 'Voluntariado Tecnologico',
-        subtitle: 'Organizacion Dummy',
+        title: 'Hackaton FIN4ALL',
+        subtitle: 'HackLab U',
         description:
-          'Apoyo en actividades digitales, documentacion y mejora de procesos para proyectos comunitarios.',
+          'Hackaton enfocado en soluciones financieras, donde se desarrollan prototipos para resolver problemas del mundo real.',
       },
     ],
   },
@@ -268,7 +263,7 @@ function App() {
             />
           </div>
           <div className="absolute -bottom-5 left-5 right-5 rounded-3xl border border-white/12 bg-slate-950/70 p-5 shadow-2xl backdrop-blur-xl">
-            <p className="mt-1 text-xl font-bold text-white">Entusiasmado por colaborar</p>
+            <p className="mt-1 text-xl font-bold text-white">Entusiasmado por colaborar :)</p>
           </div>
         </div>
       </section>
@@ -281,12 +276,14 @@ function App() {
           </div>
           <div className="space-y-5 text-base leading-8 text-slate-300">
             <p>
-              Me gusta 
+              Me gusta desarrollar soluciones tecnológicas que ayuden a las personas
+              a tener una vida más fácil. Usar mis conocimientos tecnólogicos para 
+              resolver retos de la vida diaria.
             </p>
             <p>
-              Mi enfoque mezcla componentes reutilizables, responsive design y
-              decisiones visuales con intencion: buen contraste, jerarquia clara
-              y pequenos detalles que hacen que una pagina se sienta terminada.
+              Mi enfoque mezcla la idea de buscar hacer algo sencillo pero útil,
+              algo que pueda ser usado por cualquier persona sin necesidad de tener conocimientos técnicos
+              y le aporte valor a su vida no un problema más por el cual preocuparse. 
             </p>
           </div>
         </div>
@@ -419,6 +416,12 @@ function App() {
               className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-100"
             >
               <img src={phone} alt="phone" className="h-5 w-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/manuel-bajos-rivera/?skipRedirect=true"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-100"
+            >
+              <img src={linkedin} alt="linkedin" className="h-5 w-5" />
             </a>
           </div>
         </div>
