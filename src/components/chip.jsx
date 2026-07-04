@@ -2,17 +2,17 @@ import 'flowbite';
 
 const Chip = ({ text, color = 'blue' }) => {
   const colorClasses = {
-    blue: "bg-brand-softer text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded",
-    gray: "bg-neutral-secondary-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded",
-    red: "bg-danger-soft text-fg-danger-strong text-xs font-medium px-1.5 py-0.5 rounded",
-    green: "bg-success-soft text-fg-success-strong text-xs font-medium px-1.5 py-0.5 rounded",
-    yellow: "bg-warning-soft text-fg-warning text-xs font-medium px-1.5 py-0.5 rounded",
+    blue: "border-cyan-300/25 bg-cyan-300/10 text-cyan-100",
+    gray: "border-slate-300/20 bg-white/8 text-slate-100",
+    red: "border-rose-300/25 bg-rose-300/10 text-rose-100",
+    green: "border-emerald-300/25 bg-emerald-300/10 text-emerald-100",
+    yellow: "border-amber-300/25 bg-amber-300/10 text-amber-100",
   };
 
-  const selectedClass = colorClasses[color];
+  const selectedClass = colorClasses[color] ?? colorClasses.blue;
 
   return (
-    <span className={selectedClass}>
+    <span className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-bold ${selectedClass}`}>
       {text}
     </span>
   );
