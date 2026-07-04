@@ -3,7 +3,7 @@ import Chip from './chip.jsx';
 const Cards = ({ title, subtitle, description, link, tecnologies = {}, children }) => {
   return (
     <article className="glass-card group flex min-h-[320px] flex-col">
-      <div className="mb-8 h-2 w-16 rounded-full bg-gradient-to-r from-cyan-300 via-violet-300 to-emerald-300 transition group-hover:w-24" />
+      <div className="mb-8 h-2 w-16 rounded-full  group-hover:w-24" />
       <div className="flex flex-1 flex-col">
         <p className="text-sm font-semibold text-cyan-200">{subtitle}</p>
         <h3 className="mt-3 text-2xl font-black leading-tight text-white">{title}</h3>

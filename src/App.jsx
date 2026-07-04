@@ -2,7 +2,7 @@ import Chip from './components/chip'
 import Cards from './components/cards'
 import mail from './assets/mail.svg'
 import phone from './assets/phone.svg'
-import heroImg from './assets/hero.png'
+import me from './assets/me.jpg'
 import './App.css'
 
 const navItems = [
@@ -11,6 +11,7 @@ const navItems = [
   { label: 'Proyectos', id: 'Proyectos' },
   { label: 'Skills', id: 'Skills' },
   { label: 'Soft Skills', id: 'SoftSkills' },
+  { label: 'Educación', id: 'Educacion' },
   { label: 'Experiencia', id: 'Experiencia' },
   { label: 'Contacto', id: 'Contacto' },
 ]
@@ -132,23 +133,16 @@ function App() {
 
       <section className="mx-auto grid min-h-[calc(100vh-72px)] max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-24">
         <div className="space-y-8">
-          <div className="flex flex-wrap gap-2">
-            <Chip text="Desarrollo web" />
-            <Chip text="Desarrollo movil" color="green" />
-            <Chip text="UI funcional" color="yellow" />
-          </div>
-
           <div className="space-y-5">
             <p className="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200">
               Manuel Bajos Rivera
             </p>
             <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-white md:text-7xl">
-              Desarrollo interfaces claras, modernas y faciles de usar.
+              Estudiante de Ingeniería de Software
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-slate-300">
-              Bienvenido a mi portafolio. Aqui reuno proyectos, habilidades y
-              experiencia con un enfoque en productos digitales bien pensados,
-              responsive y listos para crecer.
+              Bienvenido a mi portafolio. Aqui podrás encontrar mis proyectos, habilidades y
+              experiencia.
             </p>
           </div>
 
@@ -173,14 +167,13 @@ function App() {
         <div className="relative mx-auto w-full max-w-md">
           <div className="glass-panel aspect-square overflow-hidden p-8">
             <img
-              src={heroImg}
-              alt="Capas flotantes de interfaz"
+              src={me}
+              alt="Manuel Bajos Rivera"
               className="h-full w-full object-contain drop-shadow-[0_24px_60px_rgba(34,211,238,0.22)]"
             />
           </div>
           <div className="absolute -bottom-5 left-5 right-5 rounded-3xl border border-white/12 bg-slate-950/70 p-5 shadow-2xl backdrop-blur-xl">
-            <p className="text-sm text-slate-300">Disponible para colaborar en</p>
-            <p className="mt-1 text-xl font-bold text-white">Frontend, prototipos y experiencias web</p>
+            <p className="mt-1 text-xl font-bold text-white">Entusiasmado por colaborar</p>
           </div>
         </div>
       </section>
