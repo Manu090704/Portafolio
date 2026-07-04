@@ -3,6 +3,9 @@ import Cards from './components/cards'
 import mail from './assets/mail.svg'
 import phone from './assets/phone.svg'
 import me from './assets/me.jpg'
+import certificateOfAi from './assets/CertificateOfAi.pdf'
+import certificateOfEthicalHacker from './assets/CertificateOfEthicalHacker.pdf'
+import certificateScrum from './assets/CertificateScrum.pdf'
 import './App.css'
 
 const navItems = [
@@ -12,6 +15,8 @@ const navItems = [
   { label: 'Skills', id: 'Skills' },
   { label: 'Soft Skills', id: 'SoftSkills' },
   { label: 'Educación', id: 'Educacion' },
+  { label: 'Certificados', id: 'Certificados' },
+  { label: 'Actividades', id: 'Actividades' },
   { label: 'Experiencia', id: 'Experiencia' },
   { label: 'Contacto', id: 'Contacto' },
 ]
@@ -88,6 +93,96 @@ const experiences = [
             { title: 'Associate', subtitle: 'Pizza Hut', 
               description: 'Brindé atención al cliente y di soporte a las operaciones en un entorno dinámico.' },
           ]
+
+const cardSections = [
+  {
+    id: 'Educacion',
+    kicker: 'Educacion',
+    title: 'Formacion academica',
+    description:
+      'Trayectoria educativa enfocada en desarrollo de software, resolucion de problemas y construccion de productos digitales.',
+    items: [
+      {
+        title: 'Ingenieria de Software',
+        subtitle: 'Universidad Dummy',
+        description:
+          'Programa enfocado en arquitectura de software, desarrollo web, bases de datos y gestion de proyectos tecnologicos.',
+      },
+      {
+        title: 'Bachillerato Tecnologico',
+        subtitle: 'Colegio Dummy',
+        description:
+          'Formacion base en pensamiento logico, matematicas aplicadas y fundamentos de tecnologia.',
+      },
+      {
+        title: 'Curso de Ingles Profesional',
+        subtitle: 'Academia Dummy',
+        description:
+          'Practica de comunicacion tecnica, lectura de documentacion y presentaciones para entornos profesionales.',
+      },
+    ],
+  },
+  {
+    id: 'Certificados',
+    kicker: 'Certificados',
+    title: 'Aprendizaje continuo',
+    description:
+      'Certificaciones y cursos complementarios para fortalecer habilidades tecnicas y de producto.',
+    items: [
+      {
+        title: 'Artificial Intelligence',
+        subtitle: 'Certificado PDF',
+        description:
+          'Certificado enfocado en conceptos de inteligencia artificial y sus aplicaciones practicas.',
+        link: certificateOfAi,
+        linkLabel: 'Ver certificado',
+      },
+      {
+        title: 'Ethical Hacker',
+        subtitle: 'Certificado PDF',
+        description:
+          'Certificado sobre fundamentos de seguridad, analisis de vulnerabilidades y buenas practicas.',
+        link: certificateOfEthicalHacker,
+        linkLabel: 'Ver certificado',
+      },
+      {
+        title: 'Scrum Fundamentals',
+        subtitle: 'Certificado PDF',
+        description:
+          'Certificado orientado a trabajo agil, colaboracion por sprints y organizacion de equipos.',
+        link: certificateScrum,
+        linkLabel: 'Ver certificado',
+      },
+    ],
+  },
+  {
+    id: 'Actividades',
+    kicker: 'Actividades extracurriculares',
+    title: 'Participacion fuera del aula',
+    description:
+      'Espacios donde desarrollo colaboracion, liderazgo y criterio practico al trabajar con otras personas.',
+    items: [
+      {
+        title: 'Club de Programacion',
+        subtitle: 'Comunidad Universitaria',
+        description:
+          'Participacion en retos de codigo, revision de soluciones y sesiones de aprendizaje colaborativo.',
+      },
+      {
+        title: 'Hackathon de Innovacion',
+        subtitle: 'Evento Dummy',
+        description:
+          'Desarrollo rapido de prototipos, validacion de ideas y presentacion de soluciones ante mentores.',
+      },
+      {
+        title: 'Voluntariado Tecnologico',
+        subtitle: 'Organizacion Dummy',
+        description:
+          'Apoyo en actividades digitales, documentacion y mejora de procesos para proyectos comunitarios.',
+      },
+    ],
+  },
+]
 
 const scrollToSection = (id) => {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -182,13 +277,11 @@ function App() {
         <div className="section-grid">
           <div>
             <p className="section-kicker">Sobre mi</p>
-            <h2 className="section-title">Construyo con mirada de diseno y criterio tecnico.</h2>
+            <h2 className="section-title">Desarrollo pensando en el usuario.</h2>
           </div>
           <div className="space-y-5 text-base leading-8 text-slate-300">
             <p>
-              Me gusta convertir ideas en interfaces ordenadas, visualmente
-              atractivas y comodas de navegar. Trabajo cuidando tanto la
-              estructura del codigo como la experiencia de quien usa el producto.
+              Me gusta 
             </p>
             <p>
               Mi enfoque mezcla componentes reutilizables, responsive design y
@@ -258,6 +351,37 @@ function App() {
           </div>
         </div>
       </section>
+
+      {cardSections.map((section, sectionIndex) => (
+        <section
+          id={section.id}
+          className={sectionIndex % 2 === 0 ? 'mx-auto max-w-6xl px-5 py-24' : 'section-band'}
+          key={section.id}
+        >
+          <div className={sectionIndex % 2 === 0 ? '' : 'mx-auto max-w-6xl px-5'}>
+            <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+              <div>
+                <p className="section-kicker">{section.kicker}</p>
+                <h2 className="section-title">{section.title}</h2>
+              </div>
+              <p className="max-w-xl text-slate-300">{section.description}</p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {section.items.map((item) => (
+                <Cards
+                  key={item.title}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  description={item.description}
+                  link={item.link}
+                  linkLabel={item.linkLabel}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
 
       <section id="Experiencia" className="mx-auto max-w-6xl px-5 py-24">
         <p className="section-kicker">Experiencia</p>

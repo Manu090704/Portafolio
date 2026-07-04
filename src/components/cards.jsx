@@ -1,6 +1,6 @@
 import Chip from './chip.jsx';
 
-const Cards = ({ title, subtitle, description, link, tecnologies = {}, children }) => {
+const Cards = ({ title, subtitle, description, link, linkLabel = 'Ver proyecto', tecnologies = {}, children }) => {
   return (
     <article className="glass-card group flex min-h-[320px] flex-col">
       <div className="mb-8 h-2 w-16 rounded-full  group-hover:w-24" />
@@ -24,7 +24,7 @@ const Cards = ({ title, subtitle, description, link, tecnologies = {}, children 
           rel="noreferrer"
           className="mt-8 inline-flex w-fit items-center rounded-full border border-white/12 px-4 py-2 text-sm font-bold text-white transition hover:border-cyan-200/60 hover:bg-cyan-200/10"
         >
-          Ver proyecto
+          {linkLabel}
         </a>)}
       </div>
       {children}
