@@ -100,8 +100,6 @@ const cardSections = [
     id: 'Educacion',
     kicker: 'Educación',
     title: 'Formación ácademica',
-    description:
-      'Trayectoria educativa enfocada en desarrollo de software, resolucion de problemas y construccion de productos digitales.',
     items: [
       {
         title: 'IngenierÍa en Tecnologías Computacionales',
@@ -121,8 +119,6 @@ const cardSections = [
     id: 'Certificados',
     kicker: 'Certificados',
     title: 'Aprendizaje continuo',
-    description:
-      'Certificaciones y cursos complementarios para fortalecer habilidades tecnicas y de producto.',
     items: [
       {
         title: 'AI Engineer',
@@ -152,10 +148,8 @@ const cardSections = [
   },
   {
     id: 'Actividades',
-    kicker: 'Actividades extracurriculares',
-    title: 'Participación fuera del aula',
-    description:
-      'Espacios donde desarrollo colaboración, liderazgo y criterio práctico al trabajar con otras personas.',
+    kicker: 'Participación fuera del aula',
+    title: 'Actividades extracurriculares',
     items: [
       {
         title: 'ICPC Competencia de Programación Competitiva',
@@ -189,7 +183,7 @@ function App() {
       <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(84,214,255,0.18),transparent_28%),radial-gradient(circle_at_84%_8%,rgba(168,85,247,0.22),transparent_25%),linear-gradient(135deg,#080914_0%,#111827_48%,#0f172a_100%)]" />
       <div className="fixed inset-0 -z-10 opacity-[0.08] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:52px_52px]" />
 
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#080914]/70 backdrop-blur-xl">
+      <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#080914]/70 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
           <button
             type="button"
@@ -213,7 +207,7 @@ function App() {
           </div>
 
           <a
-            href="mailto:manuel@example.com"
+            href="mailto:mbajosr@gmail.com"
             className="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-300/20"
           >
             Hablemos
@@ -221,7 +215,7 @@ function App() {
         </nav>
       </header>
 
-      <section className="mx-auto grid min-h-[calc(100vh-72px)] max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-24">
+      <section className="mx-auto grid min-h-screen max-w-6xl items-center gap-10 px-5 pb-16 pt-28 md:grid-cols-[1.05fr_0.95fr] md:py-24">
         <div className="space-y-8">
           <div className="space-y-5">
             <p className="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-200">
@@ -293,12 +287,8 @@ function App() {
         <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <p className="section-kicker">Proyectos</p>
-            <h2 className="section-title">Trabajo seleccionado</h2>
+            <h2 className="section-title">Proyectos destacados</h2>
           </div>
-          <p className="max-w-xl text-slate-300">
-            Una muestra compacta de proyectos pensada para que se pueda escanear
-            rapido: problema, solucion y tecnologias principales.
-          </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-3">
@@ -331,8 +321,8 @@ function App() {
         </div>
       </section>
 
-      <section id="SoftSkills" className="section-band">
-        <div className="mx-auto max-w-6xl px-5">
+      <section id="SoftSkills" className="mx-auto max-w-6xl px-5 py-24">
+        <div>
           <p className="section-kicker">Habilidades blandas</p>
           <div className="mt-4 grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-start">
             <div className="flex w-full flex-wrap gap-2">
@@ -352,10 +342,10 @@ function App() {
       {cardSections.map((section, sectionIndex) => (
         <section
           id={section.id}
-          className={sectionIndex % 2 === 0 ? 'mx-auto max-w-6xl px-5 py-24' : 'section-band'}
+          className={sectionIndex % 2 === 0 ? 'section-band' : 'mx-auto max-w-6xl px-5 py-24'}
           key={section.id}
         >
-          <div className={sectionIndex % 2 === 0 ? '' : 'mx-auto max-w-6xl px-5'}>
+          <div className={sectionIndex % 2 === 0 ? 'mx-auto max-w-6xl px-5' : ''}>
             <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
               <div>
                 <p className="section-kicker">{section.kicker}</p>
@@ -381,7 +371,8 @@ function App() {
       ))}
 
       <section id="Experiencia" className="mx-auto max-w-6xl px-5 py-24">
-        <p className="section-kicker">Experiencia</p>
+        <p className="section-kicker">Experiencia profesional</p>
+        <p className="section-title">Prácticas y trabajos</p>
         <div className="mt-6 grid gap-5 md:grid-cols-3">
           {experiences.map((experience, index) => (
             <Cards
@@ -399,10 +390,9 @@ function App() {
           <p className="section-kicker">Contacto</p>
           <div className="mt-4 flex flex-col justify-between gap-8 md:flex-row md:items-end">
             <div>
-              <h2 className="section-title">Creamos algo juntos?</h2>
+              <h2 className="section-title">¿Hacemos algo juntos?</h2>
               <p className="mt-4 max-w-2xl text-slate-300">
-                Si tienes una idea, proyecto o practica que quieras convertir en
-                una experiencia web, podemos darle forma desde aqui.
+                Si tienes una idea, un proyecto o una visión que quieras convertir en una experiencia digital, podemos darle forma juntos.
               </p>
             </div>
             <a
